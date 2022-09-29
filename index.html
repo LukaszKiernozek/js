@@ -3,7 +3,9 @@
     <script>/* <![CDATA[ */ ringDataLayer = { "context": { "variant": { "accelerator": "ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3M=" } } }; /* ]]> */</script>
     <script>/* <![CDATA[ */ accConf = { "events": { "endpointPaths": ["/a8f4d8cd95e164917035b64b867a45dd"] } }; /* ]]> */</script>
     <title>kiernozek zad3</title>
+    <script type="text/javascript">function show_alert() { alert("Uwaga!"); }</script>
     <script language="JavaScript">
+
 
         function WinOpen_Kiernozek() {
             window.open("obraz.html", "okienko1", "toolbar=no,directories=no,menubar=no,height=550,width=900,top=80,left=200");
@@ -20,22 +22,50 @@
         function WinOpen_Kiernozek5() {
             window.open("kod2.html", "okienko5", "toolbar=no,directories=no,menubar=no,height=550,width=900,top=80,left=200");
         }
+        function show_confirm() {
+            var r = confirm("Naciśnij klawisz");
+            if (r == true) { document.write("Nacisnąłeś OK!"); }
+            else { document.write("Nacisnąłeś Cancel!"); }
+        } 
+        function show_prompt() {
+            var name = prompt("Napisz imię", "Imię Nazwisko");
+            if (name != null && name != "") {
+                document.write("Witaj " + name + "! jak się masz?");
+            }
+        }
+
 
     </script>
+    <style>
+        p {
+            text-align: right;
+            font-size: 2cm;
+        }
+    </style>
 </head>
-<style>
-p{
-    text-align:right;
-    font-size:2cm;
-}
-</style>
+
 <body>
+
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            var liczba1 = prompt("liczba1=", "");
+            var liczba2 = prompt("liczba2=", "");
+            var suma;
+            var a = parseFloat(liczba1);
+            var b = parseFloat(liczba2);
+            suma = a + b;
+            document.write("suma=" + a + " + " + b + " = " + suma + "<br>");
+        </script>
+    </div>
 
     <p>Kiernozek</p>
     <form>
         <input type="button" name="przycisk" value="zadanie 1 teoria" onclick="WinOpen_Kiernozek(' ')">
         <input type="button" name="przycisk" value="zadanie drugie praca z oknami" onclick="WinOpen_Kiernozek2(' ')">
         <input type="button" name="przycisk" value="zadanie 3 teoria" onclick="WinOpen_Kiernozek3(' ')">
+        <input type="button" onclick="show_alert()" value="Pokaż Alert Box" />
+        <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+        <input type="button" onclick="show_prompt()" value="Pokaż prompt box" />
     </form>
     <p></p>
     <form>
