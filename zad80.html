@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> Zadanie 82</title>
+<style>
+    h1{
+        color:red;
+        font-size: 1.5cm;
+        font-family:arial;
+    }
+    li{
+        color:green;
+        font-size:0.7cm
+    }
+    ul{
+        list-style-type:none;
+    }
+
+</style>
+
+<script language="JavaScript">
+function pushbutton() {
+alert("Czesc !");}
+</script>
+
+</head>
+<body>
+<h1>Kiernozek</h1>
+<ul>
+<li>dzis = new Date()-->wyświetla obecną date i godzinę</li>
+<li>dzis = dzis.getHours()-->wyświetla obecną godzinę</li>
+<li>dzis = dzis.getMinutes()-->wyświetla obecne minuty do następnej godziny</li>
+<li>dzis = dzis.getMonth()-->wyświetla obecny miesiąc</li>
+<li>dzis = dzis.getDate()-->wyświetla obecny dzień miesiąca</li>
+<li>dzis = dzis.getFullYear()-->wyświetla obecny rok</li>
+</ul>
+Ostatnio zmodyfikowany
+
+<script language="LiveScript">
+document.write(document.lastModified,"<br>")
+</script>
+
+<form>
+<input type="button" name="Button1" value="Naciśnij mnie" onclick="pushbutton()">
+</form>
+
+<script language="JavaScript">
+dzis = new Date()
+document.write("<br>Aktualny czas : ",dzis.getHours(),":",dzis.getMinutes())
+document.write("<br>Aktualna data : "+'<span style = "font-size: 1cm; color:red;">',dzis.getDate()+'</span>',","+'<span style = "font-size: 1cm; color:green;">',dzis.getMonth()+1+'</span>',","+'<span style = "font-size: 1cm; color:blue;">',dzis.getFullYear()+'</span>');
+</script>
+
+</body>
+</html>
