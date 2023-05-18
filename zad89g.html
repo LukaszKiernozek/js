@@ -1,0 +1,99 @@
+<html>
+<head>
+<script type="text/javascript">
+function obliczani(dane)
+{
+wynik.innerHTML=" ";
+cena_koncowa=0;
+if ( dane.wybor[0].checked)
+93
+{
+cena_koncowa=parseFloat(dane.cena.value);
+}
+if ( dane.wybor[1].checked)
+{
+cena_koncowa=0.9*parseFloat(dane.cena.value);
+}
+if ( dane.wybor[2].checked)
+{
+cena_koncowa=0.8*parseFloat(dane.cena.value);
+}
+if (dane.vat.selectedIndex==0)
+{
+cena_koncowa=cena_koncowa;
+}
+if (dane.vat.selectedIndex==1)
+{
+cena_koncowa=1.07*cena_koncowa;
+}
+if (dane.vat.selectedIndex==2)
+{
+cena_koncowa=1.23*cena_koncowa;
+}
+if(dane.ubezpieczenie.checked == true)
+{
+cena_koncowa=1.15*cena_koncowa;
+}
+if(dane.gwarancja.checked == true)
+{
+cena_koncowa=1.28*cena_koncowa;
+}
+wynik.innerHTML="do zapłaty "+cena_koncowa.toFixed(2)+" zł";
+}
+function obliczanie(dane){
+document.write("Klient zamówił:");
+document.write(nr);
+}
+</script>
+</head>
+<body>
+    <h1>zamowienie z pizzerii</h1>
+<form name="formularz">
+
+    <b>Wybierz rodzaj pizzy:</b><br>
+    rodzaje pizzy: <select name="pizza"/>
+    <option value="0"> Pizza amerykańska
+    <option value="1"> Pizza gourmet
+    <option value="2"> Pizza siciliana
+    </select><br><br>
+    <b>Wybierz napój:</b><br>
+    napoje: <select name="napoje"/>
+    <option value="0"> Woda
+    <option value="1"> Kawa
+    <option value="2"> Herbata
+    </select><br><br>
+
+    <b>Sałatka?:</b><br>
+Tak <input type="radio" name="wybor" value=3 /><br><br>
+Nie <input type="radio" name="wybor" value=4 /><br><br>
+
+    <b>Wybierz sałatkę:</b><br>
+    sałatki: <select name="salatki"/>
+    <option value="0"> s
+    <option value="1"> s
+    <option value="2"> s
+    </select><br><br>
+    <b>Dane klienta</b><br>
+    Imię i nazwisko <input type="text" name="imienazwisko"/><br><br>
+    Numer Telefonu <input type="text" name="nr"/><br><br>
+    E-Mail <input type="text" name="mail"/><br><br>
+    <b>Dane zamieszkania</b><br>
+    Ulica <input type="text" name="ul"/><br><br>
+    Miasto <input type="text" name="miasto"/><br><br>
+    Dom <input type="text" name="dom"/><br><br>
+    Mieszkanie <input type="text" name="mieszkanie"/><br><br>
+
+
+
+
+<!--ubezpieczenie zakup &nbsp&nbsp&nbsp15%<input type="checkbox" name="ubezpieczenie" value=0 /><br>
+94
+przedłużona gwarancja 28%<input type="checkbox" name="gwarancja" value=0 /><br><br>
+ <input type="button" value="Oblicz....." onClick="obliczanie(this.form)"/><br><br> -->
+<input type="button" value="Zamów" onClick="obliczanie(this.form)"/><br><br>
+</form>
+<table>
+<tr id="wynik"></tr>
+</table>
+</body>
+</html>
